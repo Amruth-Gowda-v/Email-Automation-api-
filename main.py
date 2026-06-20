@@ -2,9 +2,9 @@ from smtplib import *
 import requests
 import json
 
-my_email="ssummationn@gmail.com"
-my_pass="vshhlnrnicegazsj"
-yor_email="amruthgowda06@gmail.com"
+my_email=""
+my_pass=""
+yor_email=""
 
 
 api_key="DQNOOLVUUYPRAUNL"
@@ -24,6 +24,7 @@ symbol = quote["01. symbol"]
 open_price = quote["02. open"]
 high_price = quote["03. high"]
 low_price = quote["04. low"]
+change_percent = quote["10. change percent"]
 
 
 with SMTP("smtp.gmail.com", 587) as connection:
@@ -35,6 +36,7 @@ Symbol: {symbol}
 Open: {open_price}
 High: {high_price}
 Low: {low_price}
+change percent: {change_percent}
 """)
 
 
